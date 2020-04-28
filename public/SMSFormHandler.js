@@ -45,7 +45,7 @@ $(document).ready(function() {
 
       $.ajax({
         type: 'POST',
-        url: 'https://bcrrcb4zdc.execute-api.us-west-2.amazonaws.com/call/',
+        url: 'https://5tve7pk601.execute-api.us-west-2.amazonaws.com/call/',
         
         data: data,
         success: function(res) {
