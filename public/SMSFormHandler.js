@@ -43,11 +43,11 @@ $(document).ready(function() {
         'optTimestamp': timestamp.toString()
       });
 
-      var authUser = storage.getItem('CognitoIdentityServiceProvider.18qa4ijulum1ui5jaiqc1d4drl.LastAuthUser');
+      var authUser = localStorage.getItem('CognitoIdentityServiceProvider.18qa4ijulum1ui5jaiqc1d4drl.LastAuthUser');
       console.log(authUser);
       var idTokenKey = 'CognitoIdentityServiceProvider.18qa4ijulum1ui5jaiqc1d4drl.' + authUser + '.idToken';
       console.log(idTokenKey);
-      var idTokenValue = storage.getItem(idTokenKey);
+      var idTokenValue = localStorage.getItem(idTokenKey);
 
       $.ajax({
         type: 'POST',
