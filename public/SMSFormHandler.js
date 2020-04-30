@@ -43,12 +43,14 @@ $(document).ready(function() {
         'optTimestamp': timestamp.toString()
       });
 
-      var authUser = localStorage.getItem('CognitoIdentityServiceProvider.18qa4ijulum1ui5jaiqc1d4drl.LastAuthUser');
-      console.log(authUser);
-      var idTokenKey = 'CognitoIdentityServiceProvider.18qa4ijulum1ui5jaiqc1d4drl.' + authUser + '.idToken';
-      console.log(idTokenKey);
-      var idTokenValue = localStorage.getItem(idTokenKey);
-
+      for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+        var storagekey = localStorage.key( i );
+        console.log(storagekey);
+        if (storagekey.includes("idToken")) {
+          var idTokenKey = localStorage.getItem( storagekey ); 
+        }
+      }
+      
       $.ajax({
         type: 'POST',
         url: 'https://5tve7pk601.execute-api.us-west-2.amazonaws.com/call/',
