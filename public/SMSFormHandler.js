@@ -47,7 +47,7 @@ $(document).ready(function() {
         var storagekey = localStorage.key( i );
         console.log(storagekey);
         if (storagekey.includes("idToken")) {
-          var idTokenKey = localStorage.getItem( storagekey ); 
+          var idTokenValue = localStorage.getItem( storagekey ); 
         }
       }
       
