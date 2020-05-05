@@ -6,6 +6,7 @@ $(document).ready(function() {
     var firstName = $("#firstName").val(),
         lastName = $("#lastName").val(),
         mrn = $("#mrn").val(),
+        lang = $("#lang").val(),
         source = window.location.pathname,
         optTimestamp = undefined,
         utcSeconds = Date.now() / 1000,
