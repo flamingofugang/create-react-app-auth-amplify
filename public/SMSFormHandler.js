@@ -22,6 +22,8 @@ $(document).ready(function() {
       $('#form-response').html('<div class="mt-3 alert alert-info" role="alert">Please enter patient last name.</div>');
     } else if (mrn == "") {
       $('#form-response').html('<div class="mt-3 alert alert-info" role="alert">Please enter patient MRN#.</div>');
+    } else if (lang == "") {
+      $('#form-response').html('<div class="mt-3 alert alert-info" role="alert">Please enter preferred language.</div>');
     } else if (phone.match(/[^0-9]/gi)) {
       $('#form-response').html('<div class="mt-3 alert alert-info" role="alert">Your phone number contains invalid characters. Please check the phone number that you supplied.</div>');
     } else if (phone.length < 10) {
@@ -39,13 +41,14 @@ $(document).ready(function() {
         'firstName': firstName,
         'lastName': lastName,
         'mrn': mrn,
+        'lang': lang,
         'source': source,
         'optTimestamp': timestamp.toString()
       });
 
       for ( var i = 0, len = localStorage.length; i < len; ++i ) {
         var storagekey = localStorage.key( i );
-        console.log(storagekey);
+        // console.log(storagekey);
         if (storagekey.includes("idToken")) {
           var idTokenValue = localStorage.getItem( storagekey ); 
         }
