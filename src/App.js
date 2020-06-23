@@ -8,11 +8,7 @@ Amplify.configure(aws_exports);
 class App extends Component {
   render() {
     return (
-    	<ul>
-	  <li>
-	    <a href="/register.html">Register New Contact for SMS</a>
-	  </li>
-	</ul>
+      <a href="/register.html">Register New Contact for SMS</a>
     );
   }
 }
